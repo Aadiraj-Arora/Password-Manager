@@ -1,0 +1,975 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav2 {
+    display: flex;
+    background-color: #0096B4;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    position: sticky;
+    z-index: 3;
+    top: 0;
+    left: 0;
+}
+
+.nav2 div {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.nav2 div img {
+    width: 55px;
+}
+
+.nav2 ul {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.nav2 ul li {
+    font-size: 20px;
+    list-style-type: none;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.nav2 a:hover {
+    color: rgb(240, 237, 237);
+    transition: color 0.3s ease;
+
+}
+
+table {
+    border: 2px solid white;
+    border-collapse: collapse;
+}
+
+main {
+    position: relative;
+}
+
+#hero2 {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 170px;
+    padding-bottom: 80px;
+}
+
+#hero2 h2 {
+    font-size: 40px;
+    width: 95vw;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#hero2 p {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+#hero2 h3 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+table {
+    margin-bottom: 30px;
+}
+
+table td,
+th {
+    font-size: 20px;
+    padding: 10px 70px;
+    border: 1px solid white;
+}
+
+#hero2 form div {
+    margin-bottom: 25px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#hero2 form div:last-child {
+    margin-bottom: 0;
+}
+
+#hero2 form div label {
+    min-width: 120px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#hero2 form div label:hover {
+    color: #00B4D8;
+    transition: color 0.3s ease;
+}
+
+#hero2 form div input {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #00ff88;
+    box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
+    border-radius: 4px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    color: white;
+    background-color: #111;
+
+}
+
+#hero2 form div input:focus {
+    border-color: #00B4D8;
+}
+
+#hero2 form div input:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 25px rgba(0, 255, 136, 0.5);
+}
+
+#hero2 form button {
+    padding: 12px 30px;
+    font-size: 18px;
+    background-color: #00B4D8;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+#hero2 form button:hover {
+    background-color: #0096B4;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#hero2 form button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+table .btnt {
+    padding: 7px 23px;
+    font-size: 16px;
+    background-color: #d83d00;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+table .btnt:hover {
+    background-color: #e60303;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table .btnt:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+table .copy {
+    width: 20px;
+    cursor: pointer;
+}
+
+.showMessage {
+    border-radius: 5px;
+    padding: 4px 10px;
+    text-align: center;
+    position: fixed;
+    top: 650px;
+    left: 45vw;
+    display: none;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
+/* Pricing */
+#pricing {
+    background-color: #0D1B2A;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 70px 20px;
+    padding-bottom: 100px;
+    margin: 0;
+}
+
+#pricing h1 {
+    color: #00ff88;
+    font-size: 28px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.plan-box {
+    background-color: #111111;
+    border: 1px solid #00ff88;
+    padding: 25px;
+    border-radius: 10px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 255, 136, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(0, 255, 136, 0.6);
+}
+
+.plan-title {
+    color: #00ff88;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 42px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: white;
+}
+
+.sub-text {
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #00ff88;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-block;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #00e07a;
+}
+
+.btn:hover {
+    color: rgb(25, 24, 24) !important;
+    transition: color 0.3s ease;
+}
+
+.features {
+    font-size: 14px;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.features li {
+    margin: 8px 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.features li::before {
+    content: "✔";
+    color: #00ff88;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+
+
+/* Responsiveness */
+@media (max-width:1332px) {
+    #hero .hero-text h2 {
+        font-size: 60px;
+        max-width: 600px;
+        line-height: 95px;
+        min-width: 550px;
+        font-weight: 600;
+    }
+
+    #hero .hero-text div p {
+        max-width: 40vw;
+        font-size: 18px;
+        line-height: 25px;
+        margin-bottom: 80px;
+    }
+
+    #about>div:first-child {
+        max-width: 1000px;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #about>div>div {
+        max-width: 85%;
+        margin-top: 20px;
+        gap: 30px;
+    }
+
+    #about img {
+        width: 60vw;
+        height: auto;
+    }
+
+
+}
+
+@media (max-width:1200px) {
+    #hero .hero-text {
+        flex-wrap: wrap;
+    }
+
+    #hero .hero-text h2 {
+        font-size: 65px;
+        max-width: 95%;
+        line-height: 95px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    #hero .hero-text div p {
+        max-width: 95%;
+        font-size: 22px;
+        line-height: 30px;
+        margin-bottom: 80px;
+    }
+
+    #features .itemcont {
+        margin-top: 80px;
+        gap: 50px;
+    }
+
+    #features .itemcont .item {
+        margin: 0;
+        width: 650px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column;
+    }
+
+    #features .itemcont .item img {
+        width: 400px;
+    }
+
+    #features div:first-child {
+        font-weight: 600;
+        font-size: 19px;
+        margin-bottom: 9px
+    }
+
+    #features h3 {
+        font-size: 45px;
+        font-weight: 500;
+    }
+
+    #features h3:last-of-type {
+        margin-bottom: 55px;
+    }
+
+    #features p {
+        max-width: 60vw;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    #features .buttons {
+        margin-top: 30px;
+        gap: 30px;
+    }
+
+    #steps h3 {
+        max-width: 90%;
+    }
+
+    #steps .cont .item {
+        max-width: 650px;
+    }
+
+    #steps .cont #item3 {
+        width: 650px;
+    }
+
+    #testimonials .cont .item {
+        max-width: 650px;
+    }
+
+    #testimonials .cont #item3 {
+        width: 650px;
+    }
+
+    #testimonials h3 {
+        max-width: 90%;
+    }
+
+    #join div h3 {
+        font-size: 3.5vw;
+        max-width: 60vw;
+        margin: 2vw 0;
+    }
+
+    #join .box p {
+        font-size: 18px;
+    }
+
+    #join .box .buttons .sign-up {
+        padding: 7px 14px;
+        font-size: 18px;
+        border-radius: 16px;
+    }
+
+    #join .box .buttons .learn {
+        padding: 7px 14px;
+        font-size: 18px;
+        border-radius: 16px;
+    }
+
+    table td,
+    th {
+        padding: 10px 30px;
+        font-size: 20px !important;
+        text-align: center;
+    }
+
+}
+
+@media (max-width:900px) {
+
+
+    nav {
+        width: 90vw;
+        position: fixed;
+    }
+
+    nav ul li {
+        font-size: 18px;
+    }
+
+    nav .buttons {
+        gap: 15px;
+    }
+
+    nav .buttons .learn {
+        padding: 5px 13px;
+        font-size: 17px;
+        border-radius: 16px;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -220px;
+        /* initially hidden */
+        height: 100%;
+        background: black;
+        flex-direction: column;
+        width: 200px;
+        padding-top: 60px;
+        transition: right 0.3s ease;
+        gap: 40px;
+    }
+
+    .nav-links li {
+        text-align: left;
+    }
+
+    nav .hamburger {
+        display: block;
+        font-size: 28px;
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+    /* When menu is active */
+    .nav-links.active {
+        right: 0;
+        top: 80px;
+        height: 100%;
+    }
+
+    /* Hamburger animation to "X" */
+    .hamburger.active {
+        transform: rotate(90deg);
+    }
+
+    footer>div:first-child {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    footer>div:first-child>div:last-child {
+        margin-top: 25px;
+        flex-wrap: wrap;
+        gap: 40px;
+        width: auto;
+    }
+}
+
+@media (max-width:750px) {
+
+    footer>div:last-child>div:last-child {
+        margin-top: 10px;
+    }
+
+
+    #hero .hero-text h2 {
+        font-size: 65px;
+        max-width: 95%;
+        line-height: 90px;
+        font-weight: 500;
+        margin-bottom: 19px;
+    }
+
+    #hero .hero-text div p {
+        max-width: 95%;
+        font-size: 19px;
+        line-height: 29px;
+        margin-bottom: 75px;
+    }
+
+    #features .itemcont {
+        margin-top: 75px;
+        gap: 45px;
+    }
+
+    #features .itemcont .item {
+        margin: 0;
+        width: 600px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column;
+    }
+
+    #features .itemcont .item img {
+        width: 350px;
+    }
+
+    #features div:first-child {
+        font-weight: 600;
+        font-size: 18px;
+        margin-bottom: 8px
+    }
+
+    #features h3 {
+        font-size: 40px;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    #features h3:last-of-type {
+        margin-bottom: 50px;
+
+    }
+
+    #features p {
+        max-width: 55vw;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    #features .buttons {
+        margin-top: 25px;
+        gap: 25px;
+    }
+
+    #steps h3 {
+        max-width: 90%;
+    }
+
+    #steps .cont .item {
+        max-width: 600px;
+    }
+
+    #steps .cont #item3 {
+        width: 600px;
+    }
+
+    #testimonials .cont .item {
+        max-width: 600px;
+    }
+
+    #testimonials .cont #item3 {
+        width: 600px;
+    }
+
+    #testimonials h3 {
+        max-width: 90%;
+    }
+
+    #join div h3 {
+        font-size: 3vw;
+        max-width: 55vw;
+        margin: 1.5vw 0;
+    }
+
+    #join .box p {
+        font-size: 2.3vw;
+    }
+
+    #join .box .buttons .sign-up {
+        padding: 6px 13px;
+        font-size: 17px;
+        border-radius: 15px;
+    }
+
+    #join .box .buttons .learn {
+        padding: 6px 13px;
+        font-size: 17px;
+        border-radius: 15px;
+    }
+
+    #about div div div h6 {
+        font-size: 20px;
+        gap: 8px;
+    }
+}
+
+@media (max-width:550px) {
+
+    nav {
+        padding: 10px 15px;
+        width: 95vw;
+    }
+
+    nav .hamburger {
+        font-size: 22px;
+    }
+
+    nav .logo {
+        font-size: 19px;
+    }
+
+    nav .logo img {
+        width: 40px;
+    }
+
+    #hero .hero-text {
+        padding: 60px 10px 80px 10px;
+    }
+
+    #hero .hero-text h2 {
+        font-size: 40px;
+        max-width: 95%;
+        line-height: 90px;
+        font-weight: 500;
+        margin-bottom: 19px;
+        min-width: auto;
+        line-height: normal;
+    }
+
+    #hero .hero-text div p {
+        max-width: 95%;
+        font-size: 15px;
+        line-height: normal;
+        margin: 10px 10px 70px 5px;
+    }
+
+    #hero .hero-text div .buttons .learn {
+        padding: 5px 10px;
+        font-size: 14px;
+        border-radius: 10px;
+        margin-left: 10px;
+    }
+
+    #hero .hero-text div .buttons .sign-up {
+        padding: 5px 10px;
+        font-size: 14px;
+        border-radius: 10px;
+    }
+
+    #features .itemcont {
+        margin-top: 70px;
+        gap: 40px;
+    }
+
+    #features .itemcont .item {
+        margin: 0;
+        width: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column;
+    }
+
+    #features .itemcont .item img {
+        width: 250px;
+    }
+
+    #features div:first-child {
+        font-weight: 600;
+        font-size: 15px;
+        margin-bottom: 8px;
+    }
+
+    #features h3 {
+        font-size: 40px;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    #features h3:last-of-type {
+        margin-bottom: 40px;
+
+    }
+
+    #features {
+        padding: 70px 30px;
+    }
+
+    #features>p {
+        max-width: 70vw;
+        max-width: none;
+        text-align: center;
+        font-size: 13px;
+    }
+
+    #features .buttons {
+        margin-top: 35px;
+        gap: 25px;
+    }
+
+    #features .buttons .learn {
+        padding: 6px 13px;
+        font-size: 17px;
+        border-radius: 15px;
+    }
+
+    #features .buttons .sign-up {
+        padding: 6px 13px;
+        font-size: 17px;
+        border-radius: 15px;
+    }
+
+    #features .itemcont .item p {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    #features .itemcont .item h6 {
+        text-align: center;
+        font-size: 20px;
+        font-weight: 500;
+        margin: 20px 5px;
+    }
+
+    #about {
+        padding: 40px 10px 70px 12px;
+    }
+
+    #steps {
+        padding: 80px 30px;
+    }
+
+    #steps .cont .item h6 {
+        font-size: 20px;
+        font-weight: 400;
+        margin: 30px 0;
+    }
+
+    #steps .cont .item p {
+        font-size: 14px;
+        font-weight: 300;
+        margin: 15px 0;
+    }
+
+    #steps h3 {
+        font-size: 35px;
+        line-height: normal;
+    }
+
+    #steps .cont .item {
+        max-width: 600px;
+    }
+
+    #steps .cont #item3 {
+        width: 600px;
+    }
+
+    #testimonials {
+        padding: 80px 30px;
+    }
+
+    #testimonials .cont .item {
+        max-width: 600px;
+    }
+
+    #testimonials .cont #item3 {
+        width: 600px;
+    }
+
+    #testimonials h3 {
+        max-width: 90%;
+        font-size: 30px;
+    }
+
+    #testimonials .cont .item h6 {
+        font-size: 20px;
+        font-weight: 400;
+        margin: 30px 0;
+    }
+
+    #testimonials .cont #item1 img {
+        width: 100px;
+    }
+
+    #testimonials .cont #item2 img {
+        width: 90px;
+    }
+
+    #testimonials .cont #item3 img {
+        width: 100px;
+    }
+
+    #join div h3 {
+        font-size: 30px;
+        color: white;
+        margin-bottom: 2rem;
+        max-width: none;
+        margin: 20px 10px;
+    }
+
+    #join .box p {
+        font-size: 12px;
+        color: white;
+        margin-bottom: 1.5rem;
+        max-width: 90%;
+    }
+
+    #join .box .buttons .sign-up {
+        padding: 4px 11px;
+        font-size: 13px;
+        border-radius: 14px;
+    }
+
+    #join .box .buttons .learn {
+        padding: 4px 11px;
+        font-size: 13px;
+        border-radius: 14px;
+    }
+
+    #about div div div h6 {
+        font-size: 15px;
+        gap: 8px;
+    }
+
+    #about div h3 {
+        font-size: 35px;
+        font-weight: 500;
+        line-height: 45px;
+    }
+
+    #about div p {
+        font-size: 16px;
+        line-height: 30px;
+        margin: 17px 0;
+    }
+
+    #about>div>div {
+        flex-wrap: wrap;
+    }
+
+    #about img {
+        width: 80vw;
+        height: auto;
+    }
+
+    .overlay h1 {
+        font-size: 30px;
+        margin: 2vw 0;
+        font-weight: 500;
+    }
+
+    .overlay p {
+        font-size: 11px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        max-width: none;
+    }
+
+    .overlay input {
+        font-size: 15px;
+        padding: 8px 0;
+    }
+
+    #news .buttons button {
+        padding: 5px 142x;
+        font-size: 16px;
+        border-radius: 12px;
+    }
+
+    footer>div:first-child>div:last-child {
+        justify-content: normal;
+    }
+
+    footer .buttons button {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width:630px) {
+    #hero2 h3 {
+        font-size: 25px;
+
+    }
+
+    #hero2 h2 {
+        font-size: 35px;
+
+    }
+
+    #hero2 form div input {
+        padding: 7px 11px;
+        font-size: 15px;
+        border: 1px solid #00ff88;
+        border-radius: 3px;
+        width: 250px;
+    }
+
+}
